@@ -70,14 +70,15 @@ end
 
 class CustomHandler < AlexaSkillsRuby::Handler
 
-  on_intent("GetZodiacHoroscopeIntent") do
-    slots = request.intent.slots
-    response.set_output_speech_text("Horoscope Text")
-    #response.set_output_speech_ssml("<speak><p>Horoscope Text</p><p>More Horoscope text</p></speak>")
-    response.set_reprompt_speech_text("Reprompt Horoscope Text")
-    #response.set_reprompt_speech_ssml("<speak>Reprompt Horoscope Text</speak>")
-    response.set_simple_card("title", "content")
-    logger.info 'GetZodiacHoroscopeIntent processed'
+  on_intent("HERE") do
+		# add a response to Alexa
+    response.set_output_speech_text("I've updated your status to Here ")
+		# create a card response in the alexa app
+    response.set_simple_card("Out of Office App", "Status is in the office.")
+		# log the output if needed
+    logger.info 'Here processed'
+		# send a message to slack
+    update_status "HERE"
   end
 
 end
