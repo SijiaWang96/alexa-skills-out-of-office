@@ -1,11 +1,15 @@
 {
   "intents": [
     {
-      "intent": "ExampleIntent"
+      "intent": "BACK_IN"
     },
 
     {
       "intent": "AMAZON.HelpIntent"
+    },
+
+    {
+      "intent": "HERE"
     }
   ]
 }
