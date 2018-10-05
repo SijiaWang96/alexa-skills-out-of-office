@@ -86,7 +86,7 @@ class CustomHandler < AlexaSkillsRuby::Handler
    logger.info 'HelpIntent processed'
  end
 
- on_intent("BackIn") do
+ on_intent("BE_RIGHT_BACK") do
 
    # Access the slots
    slots = request.intent.slots
