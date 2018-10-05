@@ -108,7 +108,7 @@ class CustomHandler < AlexaSkillsRuby::Handler
      mins = duration/(60).round
      response.set_output_speech_text("I've set you away for #{ mins } minutes")
    end
-   logger.info 'BackIn processed'
+   logger.info 'BACK_IN processed'
    update_status "BACK_IN", duration
  end
 end
